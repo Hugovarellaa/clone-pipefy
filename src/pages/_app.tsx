@@ -1,8 +1,16 @@
-import { AppProps } from 'next/app';
+import { AppProps } from "next/app";
+import Head from 'next/head'
 
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Head>
+        <title>ig.news</title>
+      </Head>
 
-function MyApp({ Component, pageProps }:AppProps) {
-  return <Component {...pageProps} />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
