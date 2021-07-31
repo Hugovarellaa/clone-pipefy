@@ -3,3 +3,6 @@
 ## - typescript
 ## - eslint
 ## - sass
+## - react - icons
+## - Stripe
+
