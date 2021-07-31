@@ -10,6 +10,7 @@ export function SignInButton() {
       <FaGithub color="#04b361" />
       Hugo Alves Varella
       <FiX color="#737380" className={styles.closeIcon}/>
+      
     </button>
   ) : (
     <button type="button" className={styles.container}>
