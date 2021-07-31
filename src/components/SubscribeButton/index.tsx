@@ -6,7 +6,7 @@ export function SubscribeButton(){
             type="button"
             className={styles.subscribeButton}
         >
-            
+            Subscribe now
         </button>
     )
 }
