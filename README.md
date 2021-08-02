@@ -5,4 +5,6 @@
 ## - sass
 ## - react - icons
 ## - Stripe
+## - FaundaDB
+
 
