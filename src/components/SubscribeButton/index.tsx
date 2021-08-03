@@ -9,6 +9,8 @@ interface subscribeButtonProps {
 export function SubscribeButton({ priceId }: subscribeButtonProps) {
   const [session] = useSession();
 
+  
+
   function handleSubscribe() {
     if (!session) {
       signIn('github')
