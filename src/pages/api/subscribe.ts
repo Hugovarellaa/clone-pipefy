@@ -31,4 +31,3 @@ export default async (req: NextApiRequest, response: NextApiResponse) => {
         response.status(405).end('Method not allowed')
     }
 }
-request
