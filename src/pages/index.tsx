@@ -8,10 +8,10 @@ interface HomeProps {
   product: {
     priceId: string;
     amount: number;
-  }
+  };
 }
 
-export default function Home({ product }:HomeProps) {
+export default function Home({ product }: HomeProps) {
   return (
     <>
       <Head>
@@ -28,7 +28,7 @@ export default function Home({ product }:HomeProps) {
             Get acess to all the publications <br />
             <span>for {product.amount} month</span>
           </p>
-          <SubscribeButton priceId={product.priceId}/>
+          <SubscribeButton priceId={product.priceId} />
         </section>
         <img src="/images/avatar.svg" alt="Girl coding" />
       </main>
@@ -41,10 +41,10 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const product = {
     priceId: price.id,
-    //formatando o preço 
-    amount: new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD'
+    //formatando o preço
+    amount: new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
     }).format(price.unit_amount / 100),
   };
 
@@ -52,6 +52,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       product,
     },
-    revalidate: 60* 60* 24 // 24-hours
+    revalidate: 60 * 60 * 24 // 24-hours
   };
 };
