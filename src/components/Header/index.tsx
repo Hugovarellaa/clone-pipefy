@@ -11,6 +11,7 @@ export function Header(){
                     <a>Posts</a>
                 </nav>
                 <SignInButton />
+                
             </div>
         </header>
     )
