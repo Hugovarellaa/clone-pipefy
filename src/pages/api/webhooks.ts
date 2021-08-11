@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { Readable } from 'stream'
 import Stripe from "stripe";
 import { stripe } from "../../services/stripe";
+import { saveSubscription } from "./_lib/manageSubscription";
 
 async function buffer(readable: Readable) {
     const chunks = [];
@@ -19,8 +20,12 @@ export const config = {
         bodyParser: false
     }
 }
+
 const relevantEvents = new Set([
-    'checkout.session.completed'
+    'checkout.session.completed',
+    'customer.subscription.created',
+    'customer.subscription.updated',
+    'customer.subscription.created',
 ])
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -33,14 +38,42 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         try {
             event = stripe.webhooks.constructEvent(buf, secret, process.env.STRIPE_WEBHOOK_SECRET)
         } catch (err) {
-
             return res.status(400).send(`webhook error: ${err.message}`)
         }
 
         const { type } = event
 
         if (relevantEvents.has(type)) {
-            console.log('Evento recebido', event)
+            try {
+                switch (type) {
+                    case 'customer.subscription.created':
+                    case 'customer.subscription.updated':
+                    case 'customer.subscription.deleted':
+                    const subscription = event.data.object as Stripe.Subscription
+
+                    await saveSubscription(
+                        subscription.id,
+                        subscription.customer.toString(),
+                        type === 'customer.subscription.created'
+                    )
+
+                        break
+                    case 'checkout.session.completed':
+                        const checkoutSession = event.data.object as Stripe.Checkout.Session
+
+                        await saveSubscription(
+                            checkoutSession.subscription.toString(),
+                            checkoutSession.customer.toString(),
+                            
+                        );
+                        break;
+                    default:
+                        throw new Error('Unhandled Event.')
+
+                }
+            } catch (err) {
+                return res.json({ error: 'Webhook handler failed.' })
+            }
         }
 
         res.json({ received: true })
@@ -48,6 +81,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         res.setHeader('allow', 'POST')
         res.status(200).end('method not allowed')
     }
-
-
 }
