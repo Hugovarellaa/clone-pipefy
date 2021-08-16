@@ -1,8 +1,11 @@
-import React from 'react';
+import { GlobalStyle } from "./styles/GlobalStyles";
+
 
 export function App() {
   return (
-    <h1>Rocketseat</h1>
-  )
+    <>
+      <h1>Rocketseat</h1>
+      <GlobalStyle />
+    </>
+  );
 }
-
