@@ -1,10 +1,10 @@
 import { GlobalStyle } from "./styles/GlobalStyles";
-
+import Page from './components/Page';
 
 export function App() {
   return (
     <>
-      <h1>Rocketseat</h1>
+      <Page />
       <GlobalStyle />
     </>
   );
