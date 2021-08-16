@@ -1,10 +1,22 @@
 import { Container } from "./styles";
 
-const ModelSection: React.FC = () => {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  nodelName: string;
+  overlayNode: React.ReactNode;
+}
+
+const ModelSection: React.FC<Props> = ({
+  nodelName,
+  overlayNode,
+  children,
+  ...props
+}) => {
   return (
-    <Container>
-      <h1>asdfa</h1>
+
+    <Container {...props}>
+      {children}
     </Container>
+
   );
 };
 
