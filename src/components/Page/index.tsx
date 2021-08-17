@@ -9,6 +9,7 @@ const Page: React.FC = () => {
       <ModelsWrapper>
         <div>
           <ModelSection
+            className="colored"
             nodelName="Model One"
             overlayNode={
               <DefaultOverlayContent
