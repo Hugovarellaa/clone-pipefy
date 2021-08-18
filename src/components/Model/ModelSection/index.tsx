@@ -11,13 +11,7 @@ const ModelSection: React.FC<Props> = ({
   children,
   ...props
 }) => {
-  return (
-
-    <Container {...props}>
-      {children}
-    </Container>
-
-  );
+  return <Container {...props}>{children}</Container>;
 };
 
 export default ModelSection;
