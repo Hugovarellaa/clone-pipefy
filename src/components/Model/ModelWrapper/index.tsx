@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react";
-import ModelsContext, { CarModel } from "../../ModelsContext";
+import ModelsContext, { CarModel } from "../ModelsContext";
 import { Container } from "./styles";
 
 const ModelWrapper: React.FC = ({ children }) => {
