@@ -9,18 +9,18 @@ function Page() {
         <div>
           {[
             'Model One',
-            'Model Two',
-            'Model Three',
-            'Model Four',
-            'Model Five',
-            'Model Six',
-            'Model Seven',
+            // 'Model Two',
+            // 'Model Three',
+            // 'Model Four',
+            // 'Model Five',
+            // 'Model Six',
+            // 'Model Seven',
           ].map(modelName => (
             <ModelSection
             key={modelName}
             className="colored"
             modelName={modelName}
-            onverlayNode={
+            overlayNode={
               <DefaultOverlayContent
                 label={modelName}
                 description="Order Online for Delivery"
