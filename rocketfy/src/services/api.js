@@ -1,97 +1,112 @@
 export function loadLists() {
   return [
-    { 
-      title: 'Tarefas', 
+    {
+      title: "Tarefas",
       creatable: true,
       cards: [
         {
           id: 1,
-          content: 'Estudar módulo 01 de NodeJS',
-          labels: ['#7159c1'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          content: "Clone Interface Instragram",
+          labels: ["#7159c1"],
+          user: "https://github.com/Hugovarellaa.png",
         },
         {
           id: 2,
-          content: 'Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy',
-          labels: ['#7159c1'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          content: "Estudar Ignite - Chapter 1 - React Native",
+          labels: ["#7159c1"],
+          user: "https://github.com/Hugovarellaa.png",
         },
         {
           id: 3,
-          content: 'Estudar módulo 03 de React Native',
-          labels: ['#7159c1'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          content: "Estudar Ignite - Chapter 2 - React Native",
+          labels: ["#7159c1"],
+          user: "https://github.com/Hugovarellaa.png",
         },
         {
           id: 4,
-          content: 'Gravar Aula "NextJS: Utilizando server-side rendering com ReactJS"',
-          labels: ['#54e1f7'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          content: 'Estudar Ignite - Chapter 3 - React Native"',
+          labels: ["#54e1f7"],
+          user: "https://github.com/Hugovarellaa.png",
         },
         {
           id: 5,
-          content: 'Gravar testes e deploy ReactJS',
-          labels: ['#54e1f7'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          content: "Estudar Ignite - Chapter 4 - React Native",
+          labels: ["#54e1f7"],
+          user: "https://github.com/Hugovarellaa.png",
         },
-      ]
+      ],
     },
-    { 
-      title: 'Fazendo', 
+    {
+      title: "Fazendo",
       creatable: false,
       cards: [
         {
           id: 6,
-          content: 'Recriando clone do Pipefy',
+          content: "Estudar Ignite - Chapter 5 - React Native",
           labels: [],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
-        }
-      ]
+          user: "https://github.com/Hugovarellaa.png",
+        },
+      ],
     },
-    { 
-      title: 'Pausado', 
+    {
+      title: "Pausado",
       creatable: false,
       cards: [
         {
           id: 7,
-          content: 'Gravar sobre Geolocalização e mapas com React Native',
-          labels: ['#7159c1'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          content: "Estudar Ignite - Chapter 1 - Node.js",
+          labels: ["#7159c1"],
+          user: "https://github.com/Hugovarellaa.png",
         },
         {
           id: 8,
-          content: 'Gravar testes e deploy ReactJS',
-          labels: ['#54e1f7'],
-          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+          content: "Estudar Ignite - Chapter 2 - Node.js",
+          labels: ["#54e1f7"],
+          user: "https://github.com/Hugovarellaa.png",
         },
         {
           id: 9,
-          content: 'Ajustes na biblioteca unform',
+          content: "Estudar Ignite - Chapter 2 - Node.js",
           labels: [],
-        }
-      ]
+        },
+      ],
     },
-    { 
-      title: 'Concluído', 
+    {
+      title: "Concluído",
       creatable: false,
       done: true,
       cards: [
         {
           id: 10,
-          content: 'Gravar aula sobre deploy e CI com React Native',
+          content: "Estudar Ignite - Chapter 1 - React.Js",
           labels: [],
         },
         {
           id: 12,
-          content: 'Gravar testes e deploy ReactJS',
-          labels: ['#54e1f7'],
+          content: "Estudar Ignite - Chapter 2 - React.Js",
+          labels: ["#54e1f7"],
         },
         {
           id: 13,
-          content: 'Gravar Aula "Internacionalização de aplicações Node.js, ReactJS e React Native"',
-          labels: ['#7159c1'],
-        }
-      ]
+          content: "Estudar Ignite - Chapter 3 - React.Js",
+          labels: ["#7159c1"],
+        },
+        {
+          id: 13,
+          content: "Estudar Ignite - Chapter 4 - React.Js",
+          labels: ["#7159c1"],
+        },
+        {
+          id: 13,
+          content: "Estudar Ignite - Chapter 5 - React.Js",
+          labels: ["#7159c1"],
+        },
+        {
+          id: 13,
+          content: "Estudar Ignite - Chapter 6 - React.Js",
+          labels: ["#7159c1"],
+        },
+      ],
     },
   ];
 }
