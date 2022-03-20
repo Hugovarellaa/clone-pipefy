@@ -7,7 +7,7 @@
 &nbsp;
 
 <div>
-  <img src="./public/img01.jpg">
+  <img src="./rocketfy/public/img01.jpg">
 </div>
 
 ## 📚 Informações sobre o projeto
